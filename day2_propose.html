@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2: Propose Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="day2.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Will You Be Mine? 💍</h1>
+
+        <!-- Romantic GIF Replacement -->
+        <div class="top-gif-container" style="text-align: center; margin-bottom: 20px;">
+            <img src="https://media1.tenor.com/m/lsx7ng_DtwMAAAAC/khodor-melissa.gif" alt="Romantic Proposal"
+                style="max-width: 300px; border-radius: 15px; box-shadow: 0 8px 15px rgba(0,0,0,0.2);">
+        </div>
+
+        <div class="glass-box proposal-area">
+            <h3>I have a question for you...</h3>
+            <p>Will you walk with me forever?</p>
+            <div class="buttons">
+                <button id="btn-yes" class="action-btn">YES! 💖</button>
+                <button id="btn-no" class="action-btn">No 😢</button>
+            </div>
+            <p id="response-msg" style="display:none; color: var(--accent-color); font-weight: bold; margin-top: 10px;">
+                YAYYY! I KNEW IT! LOVE YOU! 😘</p>
+        </div>
+
+        <div class="glass-box">
+            <h3>My Proposal to You</h3>
+            <p class="message-content" style="font-size: 1.2rem; font-style: italic; white-space: pre-line;">
+                Bas Iss Janam Nhi Har Baar Chahiye 💞♾️
+                Log Karte Honge Jismani Mohobbat ❤️🔥🌹
+                Mujhe Teri Rooh Se Bhi Pyaar Chahiye 🤍✨
+                Meri Galtiyon Par Tera Bawal Chahiye 😅💘
+                Meri Kalam Likhna Chahti Hai ✍️💕
+                Use Bhi Tere Bachkane Sawal Chahiye 🥰🌸
+                Jo Teri Khushboo Se Mehekta Ho 🌷💖
+                Mujhe Wo Gulaab Chahiye 🌹😍
+                Tere Sath Sari Zindagi Jahan Bita Saku 🏡💑
+                Mujhe Wo Makan Chahiye 🏠💓
+                Tum Mujhse Kabhi Bhi Juda Na Ho 🤞💞
+                Mujhe Tmhara Umar Bhar Aisa Sath Chahiye ♾️❤️
+                Raat Ko Sou To Tera Khwaab Chahiye 🌙💭
+                Sawere Uthu To Hanthon Mein Tera Hanth Chahiye 🌅🤝💕
+                Teri Aankhon Mein Kabhi Aansu Na Dekh Paunga 🥺💗
+                Mujhe Meri Maut Par Barsaat Chahiye 🌧️🤍
+                Marne Ke Baad Bhi Mujhe Tujhse Hi Mulaakat Chahiye. 💫❤️</p>
+        </div>
+
+        <div class="glass-box sticker-area">
+            <img src="https://media.tenor.com/bX6lT6t7XoUAAAAi/milk-and-mocha-propose.gif" alt="Proposing Bear">
+        </div>
+
+        <div class="glass-box photo-section">
+            <h2>Our Future Goal </h2>
+            <div class="photo-frame"
+                style="background: transparent; border: none; box-shadow: none; padding: 0; width: 330px; height: auto; transform: none;">
+                <img src="https://media1.tenor.com/m/d1tU9PoJT4AAAAAC/bubu-and-dudu.gif" alt="Bubu and Dudu"
+                    id="user-photo" style="transform: scale(1.1); mix-blend-mode: multiply; width: 100%; height: auto;">
+            </div>
+            <p style="margin-top: 15px;">Tension mat lo, mein humesha tumhare sath hu! ❤️</p>
+        </div>
+
+        <div class="button-container" style="text-align: center; margin-top: 30px;">
+            <a href="day3_chocolate.html" class="btn-next">Yes! (Next) 💍</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Specific script for proposal interaction
+        document.getElementById('btn-yes').addEventListener('click', () => {
+            document.getElementById('response-msg').style.display = 'block';
+            confettiEffect();
+        });
+
+        document.getElementById('btn-no').addEventListener('mouseover', function () {
+            // First time hover: move to body to avoid parent overflow/transform issues
+            if (this.parentNode !== document.body) {
+                document.body.appendChild(this);
+            }
+
+            // Measure the viewport and scroll position
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+            const scrollX = window.scrollX || window.pageXOffset;
+            const scrollY = window.scrollY || window.pageYOffset;
+            const btnWidth = this.offsetWidth;
+            const btnHeight = this.offsetHeight;
+
+            // Calculate random position strictly within the visible viewport
+            // We use 'absolute' + scroll offsets to mimic staying in view without 'position: fixed'
+            const randomX = Math.random() * (viewportWidth - btnWidth);
+            const randomY = Math.random() * (viewportHeight - btnHeight);
+
+            this.style.position = 'absolute';
+            this.style.left = `${scrollX + randomX}px`;
+            this.style.top = `${scrollY + randomY}px`;
+        });
+
+        function confettiEffect() {
+            const symbols = ['🌹', '💖', '❤️', '🌸', '✨'];
+            const duration = 5000; // 5 seconds
+            const end = Date.now() + duration;
+
+            const interval = setInterval(() => {
+                if (Date.now() > end) {
+                    clearInterval(interval);
+                    return;
+                }
+
+                const el = document.createElement('div');
+                el.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+                el.style.position = 'fixed';
+                el.style.left = Math.random() * 100 + 'vw';
+                el.style.top = '-50px';
+                el.style.fontSize = Math.random() * 20 + 20 + 'px';
+                el.style.zIndex = '9999';
+                el.style.pointerEvents = 'none';
+                el.style.transition = `transform ${Math.random() * 2 + 3}s linear, opacity ${Math.random() * 2 + 3}s linear`;
+
+                document.body.appendChild(el);
+
+                // Start the animation
+                setTimeout(() => {
+                    const fallDuration = Math.random() * 2 + 3;
+                    el.style.transform = `translateY(110vh) rotate(${Math.random() * 360}deg)`;
+                    el.style.opacity = '0';
+                }, 100);
+
+                // Cleanup
+                setTimeout(() => el.remove(), 5000);
+            }, 100); // Create a symbol every 100ms
+        }
+    </script>
+</body>
+
+</html>

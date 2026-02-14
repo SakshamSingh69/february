@@ -1,0 +1,86 @@
+/* Day 6 Specific Styles - Hug Animation */
+.hug-container {
+    position: relative;
+    width: 600px;
+    max-width: 90vw;
+    margin: 20px auto;
+}
+
+.main-hug-img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: float 4s ease-in-out infinite;
+}
+
+.floating-hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff4d6d;
+    transform: rotate(45deg);
+    opacity: 0;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff4d6d;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    left: -10px;
+    top: 0;
+}
+
+.h1 {
+    bottom: 20px;
+    left: 20px;
+    animation: floatUp 3s infinite;
+}
+
+.h2 {
+    bottom: 40px;
+    right: 20px;
+    animation: floatUp 4s infinite 1s;
+}
+
+.h3 {
+    top: 20px;
+    right: 50%;
+    animation: floatUp 5s infinite 0.5s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(45deg) scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px) rotate(45deg) scale(1.2);
+        opacity: 0;
+    }
+}

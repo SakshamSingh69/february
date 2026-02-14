@@ -1,0 +1,96 @@
+/* Day 4 Specific Styles - Teddy Bear */
+.teddy-container {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    margin: 30px auto;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.bear-head {
+    width: 120px;
+    height: 100px;
+    background: #d4a373;
+    border-radius: 60% 60% 50% 50%;
+    position: relative;
+    margin: 0 auto;
+    z-index: 2;
+    box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ear {
+    width: 35px;
+    height: 35px;
+    background: #d4a373;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    z-index: -1;
+}
+
+.ear.left {
+    left: -5px;
+}
+
+.ear.right {
+    right: -5px;
+}
+
+.eye {
+    width: 12px;
+    height: 12px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+}
+
+.eye.left {
+    left: 35px;
+}
+
+.eye.right {
+    right: 35px;
+}
+
+.snout {
+    width: 40px;
+    height: 30px;
+    background: #faedcd;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 15px;
+    left: 40px;
+}
+
+.nose {
+    width: 15px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 12.5px;
+}
+
+.bear-body {
+    width: 140px;
+    height: 120px;
+    background: #d4a373;
+    border-radius: 50% 50% 45% 45%;
+    margin: -10px auto 0;
+    position: relative;
+    z-index: 1;
+}

@@ -1,0 +1,92 @@
+/* Day 1 Specific Styles - 3D Rose */
+.rose-container {
+    position: relative;
+    width: 100px;
+    height: 200px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    animation: rotateRose 8s infinite linear;
+}
+
+@keyframes rotateRose {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.flower {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    top: 10px;
+    left: 20px;
+    transform-style: preserve-3d;
+}
+
+.petal {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #d00000;
+    border-radius: 50% 50% 0 50%;
+    transform-origin: bottom right;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.petal:nth-child(1) {
+    transform: rotateZ(0deg) rotateX(20deg);
+}
+
+.petal:nth-child(2) {
+    transform: rotateZ(72deg) rotateX(20deg);
+}
+
+.petal:nth-child(3) {
+    transform: rotateZ(144deg) rotateX(20deg);
+}
+
+.petal:nth-child(4) {
+    transform: rotateZ(216deg) rotateX(20deg);
+}
+
+.petal:nth-child(5) {
+    transform: rotateZ(288deg) rotateX(20deg);
+}
+
+.stem {
+    position: absolute;
+    width: 5px;
+    height: 150px;
+    background: #2d6a4f;
+    top: 60px;
+    left: 45%;
+    border-radius: 5px;
+}
+
+.leaf {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #40916c;
+    border-radius: 0 50% 0 50%;
+    top: 100px;
+}
+
+.leaf:nth-child(6) {
+    /* Left Leaf */
+    left: -10px;
+    transform: rotate(-30deg);
+}
+
+.leaf:nth-child(7) {
+    /* Right Leaf */
+    left: 30px;
+    transform: rotate(30deg) scaleX(-1);
+}
+
+/* Improve the 3D look with more layers or pseudo-elements if needed, 
+   but for CSS-only simple 3D, this provides a stylized rotating rose look. */

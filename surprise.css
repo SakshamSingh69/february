@@ -1,0 +1,102 @@
+/* Surprise Page Styles */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    perspective: 1000px;
+}
+
+.flashcard {
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+/* Hover flip effect (desktop) */
+.flashcard:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Click flip effect (mobile/JS toggle) */
+.flashcard.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-front {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 200, 221, 0.8));
+    color: var(--accent-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.card-front h3 {
+    font-size: 1.8rem;
+    font-family: var(--font-heading);
+    margin-bottom: 10px;
+}
+
+.card-back {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    transform: rotateY(180deg);
+    border: 2px solid white;
+    overflow-y: auto;
+    /* Scroll if text is long */
+}
+
+.card-back p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-family: var(--font-body);
+}
+
+/* Floating background hearts */
+.bg-heart {
+    position: fixed;
+    top: -10vh;
+    font-size: 2rem;
+    color: rgba(255, 0, 0, 0.1);
+    z-index: -1;
+    animation: floatDown linear infinite;
+}
+
+@keyframes floatDown {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+/* Specific styling adjustments */
+.card-back ul li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}

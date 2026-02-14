@@ -1,0 +1,80 @@
+/* Day 7 Specific Styles - Kiss Day */
+.kiss-container {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    margin: 30px auto;
+}
+
+.lips {
+    width: 100px;
+    height: 60px;
+    background: #ff0a54;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(255, 10, 84, 0.4);
+    animation: pucker 1s infinite alternate;
+}
+
+.lips::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background: #590d22;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+@keyframes pucker {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.kiss {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0;
+    animation: flyKiss 3s infinite ease-out;
+}
+
+.k1 {
+    top: 0;
+    left: 20px;
+    animation-delay: 0s;
+}
+
+.k2 {
+    top: 20px;
+    right: 20px;
+    animation-delay: 1s;
+}
+
+.k3 {
+    top: -20px;
+    left: 50%;
+    animation-delay: 2s;
+}
+
+@keyframes flyKiss {
+    0% {
+        transform: translate(0, 0) scale(0.5);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(50px, -100px) scale(1.5) rotate(20deg);
+        opacity: 0;
+    }
+}

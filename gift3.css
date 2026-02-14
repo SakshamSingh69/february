@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffd6df;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.scene {
+  position: absolute;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.scene.active {
+  display: flex;
+}
+
+.item {
+  width: 70%;
+  max-width: 320px;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+}
+
+/* Animations */
+.pop {
+  animation: pop 2s ease forwards;
+}
+
+.fly {
+  animation: fly 3s ease forwards;
+}
+
+.fadeup {
+  animation: fadeup 2s ease forwards;
+}
+
+.drop {
+  animation: drop 2s ease forwards;
+}
+
+.open {
+  animation: open 2s ease forwards;
+}
+
+@keyframes pop {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fly {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(0); }
+}
+
+@keyframes fadeup {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes drop {
+  from { transform: translateY(-100vh); }
+  to { transform: translateY(0); }
+}
+
+@keyframes open {
+  from { transform: scale(0.9); }
+  to { transform: scale(1); }
+}
+
+/* Text */
+.text {
+  margin-top: 20px;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.final h1 {
+  font-size: 2.4rem;
+  color: #5a3a3a;
+}
+
+.final h2 {
+  margin-top: 10px;
+  font-size: 2rem;
+}
+
+.message {
+  margin-top: 20px;
+  width: 80%;
+  background: rgba(255,255,255,0.5);
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.sign {
+  margin-top: 20px;
+  font-style: italic;
+}

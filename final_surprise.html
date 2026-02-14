@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grand Finale ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="final.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="stars-bg"></div>
+    <div class="container">
+        <h1 class="title">My Heartbeat For You 💓</h1>
+
+        <!-- Video Section -->
+        <div class="glass-box video-section">
+            <h3>A Special Video Edit 🎥</h3>
+            <div class="video-frame">
+                <video controls width="100%"
+                    poster="https://via.placeholder.com/800x450/ff4d6d/ffffff?text=Our+Love+Story">
+                    <source src="video edit.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p style="margin-top: 15px;">A small glimpse of our beautiful journey...</p>
+        </div>
+
+        <!-- Music Player Section -->
+        <div class="glass-box music-section">
+            <h3>Our melody 🎶</h3>
+            <div class="music-player">
+                <div class="track-slider-container">
+                    <div class="track-slider" id="trackSlider">
+                        <!-- Track 1: Aaj Se Teri -->
+                        <div class="track-slide active" data-index="0">
+                            <div class="album-art" style="background-image: url('songs/aaj se teri song photo.jpg');">
+                            </div>
+                            <div class="track-info">
+                                <h4>Aaj Se Teri</h4>
+                                <p>Arijit Singh</p>
+                            </div>
+                            <div class="progress-container">
+                                <span class="current-time">0:00</span>
+                                <input type="range" class="seek-slider" min="0" max="100" value="0">
+                                <span class="total-duration">0:00</span>
+                            </div>
+                            <div class="song-dedication">
+                                <textarea
+                                    readonly>Pata hai, jab hum pehli baar mile the, tab soca nahi tha ki tum mere liye sab kuch ban jaoge. This song reminds me of the moment I decided you're the one. 
+Dooriyan bhale hi zyada ho, par mera har ek pal ab sirf tumhare naam hai. I really mean it when I say... Aaj se mera har ek kal tumhara hi hai. ❤️</textarea>
+                            </div>
+                            <audio id="audio-0" src="songs/Aaj Se Teri song.mp3"></audio>
+                        </div>
+                        <!-- Track 2: Abhi Na Jao Chhod Kar -->
+                        <div class="track-slide" data-index="1">
+                            <div class="album-art"
+                                style="background-image: url('songs/abhi na jao chor kar song photo.webp');"></div>
+                            <div class="track-info">
+                                <h4>Abhi Na Jao Chhod Kar</h4>
+                                <p>Mohammed Rafi, Asha Bhosle</p>
+                            </div>
+                            <div class="progress-container">
+                                <span class="current-time">0:00</span>
+                                <input type="range" class="seek-slider" min="0" max="100" value="0">
+                                <span class="total-duration">0:00</span>
+                            </div>
+                            <div class="song-dedication">
+                                <textarea readonly>Sach batao to, jab hum video call pe hote hain aur bye bolne ka time aata hai... tab ye song mere dimaag mein automatic bajne lagta hai. 
+Mann hi nahi karta ki call disconnect karu. Lagta hai bas tumko dekhta rahu. 
+Phone screen bahut choti hai mere pyaar ke liye, bas jaldi se milte hain. 🥺💞</textarea>
+                            </div>
+                            <audio id="audio-1" src="songs/Abhi na jao chod kar song.mp3"></audio>
+                        </div>
+                        <!-- Track 3: Afreen Afreen -->
+                        <div class="track-slide" data-index="2">
+                            <div class="album-art"
+                                style="background-image: url('songs/afreen afreen song photo.webp');"></div>
+                            <div class="track-info">
+                                <h4>Afreen Afreen</h4>
+                                <p>Rahat Fateh Ali Khan, Momina Mustehsan</p>
+                            </div>
+                            <div class="progress-container">
+                                <span class="current-time">0:00</span>
+                                <input type="range" class="seek-slider" min="0" max="100" value="0">
+                                <span class="total-duration">0:00</span>
+                            </div>
+                            <div class="song-dedication">
+                                <textarea readonly>Yaar tum itni sundar kaise ho? Jab bhi tumhari photo dekhta hu, bas dekhta hi reh jata hu. Ye gana tumhare liye hi bana hai. 
+Pixels ke peeche bhi tumhari aankhen aur smile jaadu karti hain. I don't need any filters to see how "Afreen" you are. 
+Tum meri life ka sabse khoobsurat ittefaq ho jispe mujhe aaj bhi yakeen nahi hota. ✨😍</textarea>
+                            </div>
+                            <audio id="audio-2" src="songs/Afreen Afreen song.mp4"></audio>
+                        </div>
+                        <!-- Track 4: Dil Maang Raha Hai -->
+                        <div class="track-slide" data-index="3">
+                            <div class="album-art"
+                                style="background-image: url('songs/dil mang raha h song photo.jpg');"></div>
+                            <div class="track-info">
+                                <h4>Dil Maang Raha Hai</h4>
+                                <p>Yasser Desai</p>
+                            </div>
+                            <div class="progress-container">
+                                <span class="current-time">0:00</span>
+                                <input type="range" class="seek-slider" min="0" max="100" value="0">
+                                <span class="total-duration">0:00</span>
+                            </div>
+                            <div class="song-dedication">
+                                <textarea readonly>Mera dil na ab bahut ziddi ho gaya hai. Isko bas tum chahiye. 
+It’s flirty, it’s restless, and honestly... it’s totally obsessed with you. Kasam se, itna dur rehke bhi tumne kaise mujhe apne peeche itna pagal kar diya? 
+Bahut ho gayi ye dooriyaan, ab bas aa jao mere paas taaki mein dikha saku what I'm asking for. 😉🔥</textarea>
+                            </div>
+                            <audio id="audio-3" src="songs/Dil Maang Raha Hai song.mp3"></audio>
+                        </div>
+                        <!-- Track 5: Ek Ajnabi Haseena Se -->
+                        <div class="track-slide" data-index="4">
+                            <div class="album-art"
+                                style="background-image: url('songs/ek ajnabee haseena se song photo.jpg');"></div>
+                            <div class="track-info">
+                                <h4>Ek Ajnabi Haseena Se</h4>
+                                <p>Kishore Kumar</p>
+                            </div>
+                            <div class="progress-container">
+                                <span class="current-time">0:00</span>
+                                <input type="range" class="seek-slider" min="0" max="100" value="0">
+                                <span class="total-duration">0:00</span>
+                            </div>
+                            <div class="song-dedication">
+                                <textarea readonly>Kaise do ajnabi random se mile aur dekho aaj hum kahan hain. Mujhe wo first interaction aaj bhi yaad hai. 
+Pata nahi tha ki ek "Haseena" meri life badal degi. Ab jab bhi ye gana bajta hai, mujhe wo purane din yaad aate hain... 
+kaise hum dhire dhire strangers se soulmates ban gaye. You are my home now. 🏠❤️</textarea>
+                            </div>
+                            <audio id="audio-4" src="songs/Ek ajnabi haseena se song.mp3"></audio>
+                        </div>
+                        <!-- Track 6: Mujhe Ishq Sikha Karke -->
+                        <div class="track-slide" data-index="5">
+                            <div class="album-art"
+                                style="background-image: url('songs/mujhe ishq sikha kr ke song photo.jpg');"></div>
+                            <div class="track-info">
+                                <h4>Mujhe Ishq Sikha Karke</h4>
+                                <p>Unknown Artist</p>
+                            </div>
+                            <div class="progress-container">
+                                <span class="current-time">0:00</span>
+                                <input type="range" class="seek-slider" min="0" max="100" value="0">
+                                <span class="total-duration">0:00</span>
+                            </div>
+                            <div class="song-dedication">
+                                <textarea
+                                    readonly>Tumne mujhe sikhaya ki pyaar sirf paas rehne ka naam nahi hai. Door rehke bhi kaise ek dusre se connect rehna hai, ye mein tumse hi sikh raha hu. If loving you was a subject, trust me, main topper hota! Aur tayyar rehna, jab milenge tab bahut saare 'practical lessons' baaki hain hamare. 😜💋
+
+I know you fear losing me, but just remember, I care about your feelings a thousand times more than my own. Main imagine bhi nahi kar sakta ki agar maine kabhi tumhara saath choda, toh tum kitna toot jaogi... and that thought alone keeps me anchored to you. Ye gana mere liye sirf music nahi hai, ye meri har us darr ki awaaz hai jo mujhe tumse door jane nahi deti. Main tumhe kabhi nahi chodunga, because I love you more than life itself. 🥺😭❤️</textarea>
+                            </div>
+                            <audio id="audio-5" src="songs/Mujhe Ishq Sikha Karke song.mp3"></audio>
+                        </div>
+                        <!-- Track 7: Pal Pal Dil Ke Paas -->
+                        <div class="track-slide" data-index="6">
+                            <div class="album-art"
+                                style="background-image: url('songs/pal pal dil ke paas song photo.jpg');"></div>
+                            <div class="track-info">
+                                <h4>Pal Pal Dil Ke Paas</h4>
+                                <p>Kishore Kumar</p>
+                            </div>
+                            <div class="progress-container">
+                                <span class="current-time">0:00</span>
+                                <input type="range" class="seek-slider" min="0" max="100" value="0">
+                                <span class="total-duration">0:00</span>
+                            </div>
+                            <div class="song-dedication">
+                                <textarea readonly>Chahe mein kaam kar raha hu ya so raha hu, mere dimaag mein hamesha tum chalti rehti ho. 
+Tum hamesha mere "Dil ke Paas" ho, bhale hi physical distance kitna bhi kyu na ho. I carry your smile with me everywhere I go. 
+Is dil pe sirf tumhara haq hai aur humesha rahega. Keys to my heart? Maine to kab ki phek di. 🗝️💖</textarea>
+                            </div>
+                            <audio id="audio-6" src="songs/Pal Pal Dil Ke Paas song.mp3"></audio>
+                        </div>
+                        <!-- Track 8: Tu Hi Haqeeqat -->
+                        <div class="track-slide" data-index="7">
+                            <div class="album-art"
+                                style="background-image: url('songs/tu hi haqueeqat song photo.jpg');"></div>
+                            <div class="track-info">
+                                <h4>Tu Hi Haqeeqat</h4>
+                                <p>Javed Ali</p>
+                            </div>
+                            <div class="progress-container">
+                                <span class="current-time">0:00</span>
+                                <input type="range" class="seek-slider" min="0" max="100" value="0">
+                                <span class="total-duration">0:00</span>
+                            </div>
+                            <div class="song-dedication">
+                                <textarea
+                                    readonly>Pure din mein sirf ek hi cheez real lagti hai... aur wo ho tum. 
+
+Meeting you was just luck, but choosing you every single morning is the best thing I do. Tum meri "Haqeeqat" ho. 🌬️💕</textarea>
+                            </div>
+                            <audio id="audio-7" src="songs/Tu Hi Haqeeqat song.mp3"></audio>
+                        </div>
+                        <!-- Track 9: Ye Parda Hata Do -->
+                        <div class="track-slide" data-index="8">
+                            <div class="album-art"
+                                style="background-image: url('songs/ye parda hata do song photo.jpg');"></div>
+                            <div class="track-info">
+                                <h4>Ye Parda Hata Do</h4>
+                                <p>Mohammed Rafi, Asha Bhosle</p>
+                            </div>
+                            <div class="progress-container">
+                                <span class="current-time">0:00</span>
+                                <input type="range" class="seek-slider" min="0" max="100" value="0">
+                                <span class="total-duration">0:00</span>
+                            </div>
+                            <div class="song-dedication">
+                                <textarea readonly>Ab ye digital screen aur filters hata do... mujhe asli waali "Tu" chahiye. 
+Bahut ho gaya video call pe haseen chehra dekhna, ab mujhe saamne chahiye wo smile. 
+ Jis din hum milenge, mein ek second ke liye bhi tumhara hanth nahi chodunga. 😘🔥</textarea>
+                            </div>
+                            <audio id="audio-8" src="songs/Ye parda hata do song.mp3"></audio>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="prevBtn" class="control-btn"><i class="fas fa-step-backward"></i></button>
+                    <button id="playPauseBtn" class="control-btn play-btn"><i class="fas fa-play"></i></button>
+                    <button id="nextBtn" class="control-btn"><i class="fas fa-step-forward"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Love Coupons Section -->
+        <div class="glass-box coupon-section">
+            <h3>Love Coupons (Valid Forever) 🎟️</h3>
+            <div class="coupon-carousel">
+                <button id="prevCouponBtn" class="nav-arrow left-arrow">❮</button>
+                <div class="coupon-slider" id="couponSlider">
+                    <!-- Coupon 1 -->
+                    <div class="coupon-slide active">
+                        <div class="coupon-inner-box">
+                            <div class="coupon-content">
+                                <h4>FREE SNUGGLES 🫂</h4>
+                                <p>Redeemable anytime for warm, cozy snuggles.</p>
+                                <span class="tagline">"Wrapped in your arms is my favorite place."</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Coupon 2 -->
+                    <div class="coupon-slide">
+                        <div class="coupon-inner-box">
+                            <div class="coupon-content">
+                                <h4>VIRTUAL MOVIE NIGHT 🎬</h4>
+                                <p>Your choice of movie + popcorn + virtual cuddles.</p>
+                                <span class="tagline">"Distance can't stop our movie dates."</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Coupon 3 -->
+                    <div class="coupon-slide">
+                        <div class="coupon-inner-box">
+                            <div class="coupon-content">
+                                <h4>VIRTUAL DATE 🍷</h4>
+                                <p>Candlelight dinner over video call.</p>
+                                <span class="tagline">"Cheers to us, miles apart but hearts together."</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Coupon 4 -->
+                    <div class="coupon-slide">
+                        <div class="coupon-inner-box">
+                            <div class="coupon-content">
+                                <h4>UNLIMITED KISSES 💋</h4>
+                                <p>Valid for a lifetime supply of kisses.</p>
+                                <span class="tagline">"Each kiss deeper than the last."</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Coupon 5 -->
+                    <div class="coupon-slide special-coupon">
+                        <div class="coupon-inner-box">
+                            <div class="coupon-content">
+                                <h4>TRIP TO DARJEELING 🏔️</h4>
+                                <p>May End. Just You & Me.</p>
+                                <span class="tagline">"To the mountains, where our love peaks."</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="nextCouponBtn" class="nav-arrow right-arrow">❯</button>
+            </div>
+        </div>
+
+        <!-- Shayari Section -->
+        <div class="glass-box shayari-section">
+            <h3>Strings of My Heart ✍️</h3>
+            <div class="shayari-grid">
+                <!-- Card 1 -->
+                <div class="shayari-flip-card">
+                    <div class="shayari-inner">
+                        <div class="shayari-front">
+                            <img src="https://cdn-icons-png.flaticon.com/512/4213/4213651.png" alt="Gift Box"
+                                width="80">
+                            <p>Tap to Open Gift 1</p>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="scroll-content">
+                                <p style="text-align: center; white-space: pre-line;">Kabhi mayus ho jaogi to aakr me
+                                    tmko hasaunga 💓
+                                    Na tmko udaas krunga na tmko rulaunga 💝🥹
+                                    Bs yahi dua h meri tm jaha raho hamesha khush raho💘
+                                    Apni khushiyan chor kr tmko puri duniya ghumaunga 💖🫶🏼
+                                    Wada h ye mera na kabhi tmko chor kr jaunga 💞❣️
+                                    Tm agr raho mere sath to sari khushiyan Tmhare kadmo me rakh jaunga 🥹❤️
+                                    Log ye wada krte h ki wo apne pyaar ke liye tod layenge chand tàare 💗
+                                    Lekin me jhute wade to nhi but ye zaroor wada kr skta hu ki sari umar me tmse aise
+                                    hi pyaar nibhaunga 💝💘</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="shayari-flip-card">
+                    <div class="shayari-inner">
+                        <div class="shayari-front">
+                            <img src="https://cdn-icons-png.flaticon.com/512/4213/4213651.png" alt="Gift Box"
+                                width="80">
+                            <p>Tap to Open Gift 2</p>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="scroll-content">
+                                <p style="text-align: center; white-space: pre-line;">Na tere jaisa chahiye Na tujhse
+                                    behtar chahiye💞🥹
+                                    Lakho ki Bheed mai Mujhe bas tu chahiye💓👑
+                                    Mile jo dard tumse Mai seh lunga💝💝
+                                    Lekin mere dard par marham Lagane ke liye mujhe bas tu chahiye💕
+                                    Tujhse mohbbat karna galat Hai to Mujhe iski saja chahiye🔪
+                                    Lekin us saja ke bad Mujhe bas tu chahiye🥺💘
+                                    Kitna bhi intejar karna pade Mujhe bas tu chahiye🥹🥰
+                                    Manjur hai mujhe Logo ki kahi bhali buri Batein sun na💫⭐
+                                    Lekin in sab baton ke Bad bhi mujhe bas tu chahiye🩷✨✨
+                                    Ha har pal har lamha Bas tu chahiye tu💓💝</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="shayari-flip-card">
+                    <div class="shayari-inner">
+                        <div class="shayari-front">
+                            <img src="https://cdn-icons-png.flaticon.com/512/4213/4213651.png" alt="Gift Box"
+                                width="80">
+                            <p>Tap to Open Gift 3</p>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="scroll-content">
+                                <p style="text-align: center; white-space: pre-line;">Jitna lamba safar ❤️ utna lamba
+                                    sath dunga 💝🫶🏼....
+                                    Mein Tmhara harr kadam kadam pr zindagi bhar sath dunga 🥹
+                                    Na chodhunga tmhara hanth na chodhunga Tmhara kabhi sath💓......
+                                    Duriyan bohot hai fir bhi pyaar se hi katt jati hamari sari raat 🥺💞💝
+                                    Maana ki tm abhi mere paas nhi ho 🥺😭🫶🏼...
+                                    Maana ki tm abhi mere paas nhi ho 😣😣🤌🏻....
+                                    To aisa lagta h ki mere rag rag me sans nhi ho 😔❤️
+                                    Duriyon ne jism ko alag to kr diya h tmse 🥀....
+                                    Yakeen maano meri jaan 💞🤌🏻 ...
+                                    fir bhi aisa lagta h ki meri harr Dhadkan tmhare sath hi ho💝🫶🏼
+                                    Bss yuhi aapke haseen honth muskurate rahen 🥺💕 ......
+                                    Aur unn honthon se nikle harr shabd aapki yaad me hame dubate rahen ❤️💞😣
+                                    Aapki chahat me hum iss kadar aapka aitbaar krenge 🫶🏼🥺
+                                    Ki aap zindagi bhar sirf hamare hi sath ka intezar krenge 🥹💖💞
+                                    Log sochte h ki takat se ya paiso se wo apni mohobbat ko apna bana lenge 🥀💔
+                                    Kabhi unse bhi pucho Jo ek dusre se pyaar krke bhi durr rehte h 🥺💕
+                                    Hum aapki yaad me apne ishq ko hi apna junoon bana lenge 🌹💓
+                                    Kehne ko to bohot kuch h pr na jane kyu ni kehta hu 🥺🥀
+                                    Aapki yaad mein apne shabdon se ek pyaar ka khat likha hu 💓💕
+                                    Ni pata mujhe ki wo tmhe pasand aaye ya na aaye 😭
+                                    Lekin mann mein hamesha bs ek hi baat kehta rehta hu 🥺🌹
+                                    Me sach me tmse bohot zyada pyaar krta hu 💕💞💝😭
+                                    I Love You Sooooooo Muchhhhhhhh My Women 💘🥺💕💞</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="shayari-flip-card">
+                    <div class="shayari-inner">
+                        <div class="shayari-front">
+                            <img src="https://cdn-icons-png.flaticon.com/512/4213/4213651.png" alt="Gift Box"
+                                width="80">
+                            <p>Tap to Open Gift 4</p>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="scroll-content">
+                                <p style="text-align: center; white-space: pre-line;">Ki Teri Zulfoon Se Khelna Pasand H
+                                    Mujhe 💇‍♀️💖
+                                    Ki Teri God Mein Sarr Rakh Kar Sona H Mujhe 😌💞
+                                    Ki Ek Sukun Sa Milta H Teri Bahoon Mein 🤗✨
+                                    Mujhe Pasand Nhi Rehna Kisi Aur Ki Panahon Mein 🫶💕
+                                    Tere Hontho Pe Hansi Meri Jaan Ban Jati Hai 😊💘
+                                    Ki Teri Aankhon Ki Chamak Meri Pehchaan Bann Jati Hai 👀💝
+                                    Ki Tu Paas Ho To Harr Pal Rango Se Bhar Jata H 🌈❤️
+                                    Tu Durr Ho To Harr Khubsoorat Lamha Bhi Udaas Bann Jata Hai 😔🌙
+                                    Ki Tere Bin Ye Duniyaa Adhuri Si Lagti Hai 🌍💔
+                                    Ki Tu Mil Jaye To Meri Zindagi Puri Si Lagti Hai</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container" style="text-align: center; margin-top: 40px; margin-bottom: 50px;">
+            <p style="font-size: 1.2rem; margin-bottom: 20px;">I Love You! ❤️</p>
+            <a href="page1.html" class="btn-next">Back to Beginning ↺</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="final.js"></script>
+    <script>
+        // Star background
+        const bg = document.querySelector('.stars-bg');
+        for (let i = 0; i < 50; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.top = Math.random() * 100 + 'vh';
+            star.style.animationDelay = Math.random() + 's';
+            bg.appendChild(star);
+        }
+    </script>
+</body>
+
+</html>

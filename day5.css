@@ -1,0 +1,18 @@
+/* Day 5 Specific Styles - Promise Hands */
+.promise-hands {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Removed old geometric hands styles */
+
+/* Removed old glow animation */
+
+.checkbox-wrapper {
+    margin-top: 10px;
+}

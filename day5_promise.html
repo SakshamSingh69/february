@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5: Promise Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="day5.css">
+    <style>
+        /* Custom styles for larger photos on Promise Day */
+        .photo-section .photo-frame {
+            width: 300px;
+            /* Increased width */
+            height: 400px;
+            /* Increased height */
+            padding: 0;
+            /* Remove padding to crop white background (polaroid style removal if desired, or just minimized) */
+            overflow: hidden;
+            /* Ensure image stays inside */
+        }
+
+        .photo-section .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Fills the box, cropping content if necessary */
+            display: block;
+        }
+
+        .photo-section p {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">My Promises to You 🤞</h1>
+
+        <div class="promise-hands">
+            <img src="https://media.tenor.com/9PTYErxTTkAAAAAm/bubu-dudu-bubu.webp" alt="Bubu Dudu Promise"
+                style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+
+        <div class="glass-box promise-box">
+            <h3>I Promise...</h3>
+            <p>To always be by your side.</p>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="p1"> <label for="p1">I accept this promise</label>
+            </div>
+        </div>
+
+        <div class="glass-box promise-box">
+            <h3>I Promise...</h3>
+            <p>To love you more each day.</p>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="p2"> <label for="p2">I accept this promise</label>
+            </div>
+        </div>
+
+        <div class="glass-box photo-section"
+            style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <h3>A Promise Kept</h3>
+            <div style="width: 100%; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <div class="photo-frame">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.T85ohlEzCe30-jO4vY2V_wHaE8?pid=Api&P=0&h=180"
+                        alt="Promise Photo 1">
+                </div>
+                <div class="photo-frame" style="transform: rotate(3deg);">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.9Nzs1-6Db7FrShJFzIpcygHaFI?pid=Api&P=0&h=180"
+                        alt="Promise Photo 2">
+                </div>
+            </div>
+            <p>Imagine us holding hands here forever.</p>
+        </div>
+
+        <div class="glass-box">
+            <h3>My Promise to You</h3>
+            <p class="message-content" style="font-size: 1.2rem; font-style: italic; white-space: pre-line;">
+                Harr Mushkil Mien Hanth Tmhara Dharna Hai 🤝💞
+                Tere Mathe Mein Kumkum Ko Bharna Hai ❤️🌺
+                Kab Tum Shaadi Ke Jode Mein Aaogi? 👰✨
+                Tmse 7 Janam Ka Wada Krna Hai ♾️💍💕</p>
+        </div>
+
+        <div class="button-container" style="text-align: center; margin-top: 30px;">
+            <a href="day6_hug.html" class="btn-next">Yes! (Next) 🤞</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

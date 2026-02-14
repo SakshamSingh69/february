@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7: Happy Valentine's Day!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="day8.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="fireworks-container"></div>
+
+    <div class="container">
+        <h1 class="title">Happy Valentine's Day My Love! ❤️</h1>
+
+        <div class="top-gifs-container"
+            style="display: flex; justify-content: center; gap: 20px; align-items: center; margin: 30px 0;">
+            <img src="https://media.tenor.com/yI_SPmRZ2i4AAAAM/valentiens-day-mocha-cute-valentine.gif"
+                alt="Happy Valentine"
+                style="max-width: 250px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);">
+            <img src="https://media.tenor.com/uBQM6iJ_hsgAAAAC/hug-cute.gif" alt="Our First Memory"
+                style="max-width: 250px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);">
+        </div>
+
+        <!-- Compact Song Player -->
+        <div class="glass-box song-section">
+            <div class="song-player-container">
+                <div class="album-art-wrapper">
+                    <img src="https://i.ytimg.com/vi/pKeJhvjS5hk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCVG8bOLA65riwSKzZfTvbLwp1H2g"
+                        alt="Chand Si Mehbooba">
+                </div>
+                <div class="song-info">
+                    <h4>Chand Si Mehbooba</h4>
+                    <p style="font-style: italic; opacity: 0.8; font-size: 0.9rem;">My moon, my world... 🌙</p>
+                </div>
+                <div class="player-controls">
+                    <div class="progress-area">
+                        <span id="current-time">0:00</span>
+                        <input type="range" id="seek-slider" min="0" max="100" value="0">
+                        <span id="total-duration">0:00</span>
+                    </div>
+                    <button id="play-pause-btn">
+                        <i class="fas fa-play" id="play-icon"></i>
+                    </button>
+                </div>
+                <audio id="main-audio" src="songs/Chand Si mehbooba song.mp3"></audio>
+            </div>
+        </div>
+
+        <div class="glass-box finale-msg">
+            <h3>My Love Letter</h3>
+            <p>From Rose Day to Valentine's Day, and for every day of my life, I choose you. I love you more than words
+                can say.</p>
+            <p class="message-content" style="font-size: 1.2rem; font-style: italic; white-space: pre-line;">
+                Tumhe Kabhi Pura Likhun ✍️💖
+                Fir Kabhi Adhura Likhun 📝💕
+                Mein Raaton Ko Baith Kr Tumhe Sawera Likhu 🌙✨
+                Mein Jab Bhi Likhun Bass Itna Likhun 💌💞
+                Khudko Tera Aur Tumko Mera Likhun</p>
+        </div>
+
+        <div class="glass-box photo-section">
+            <h3>Our Journey Together</h3>
+            <div class="heart-gallery">
+                <div class="heart-item">
+                    <img src="valen day 1.jpeg" alt="Memory 1">
+                </div>
+                <div class="heart-item">
+                    <img src="valen day 2.jpeg" alt="Memory 2">
+                </div>
+                <div class="heart-item">
+                    <img src="valen day 3.jpeg" alt="Memory 3">
+                </div>
+                <div class="heart-item">
+                    <img src="valen day 4.jpeg" alt="Memory 4">
+                </div>
+            </div>
+            <p>Us, forever and always. ❤️</p>
+        </div>
+
+        <div class="button-container"
+            style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 30px;">
+            <a href="surprise.html" class="btn-next" style="font-weight: bold; text-transform: uppercase;">WHAT'S
+                NEXT?</a>
+            <button class="btn-next" onclick="restartJourney()"
+                style="background: var(--secondary-color); font-size: 1rem;">Play Again ↺</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function restartJourney() {
+            window.location.href = 'page1.html';
+        }
+
+        // Heart explosion effect on load
+        const container = document.querySelector('.fireworks-container');
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('particle-heart');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+            heart.innerText = '❤';
+            container.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 200);
+
+        // Music Player Sync
+        const audio = document.getElementById('main-audio');
+        const playBtn = document.getElementById('play-pause-btn');
+        const playIcon = document.getElementById('play-icon');
+        const seekSlider = document.getElementById('seek-slider');
+        const currentTimeEl = document.getElementById('current-time');
+        const totalDurationEl = document.getElementById('total-duration');
+        const songSection = document.querySelector('.song-section');
+
+        function formatTime(seconds) {
+            const min = Math.floor(seconds / 60);
+            const sec = Math.floor(seconds % 60);
+            return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+        }
+
+        playBtn.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                playIcon.classList.replace('fa-play', 'fa-pause');
+                songSection.classList.add('playing');
+            } else {
+                audio.pause();
+                playIcon.classList.replace('fa-pause', 'fa-play');
+                songSection.classList.remove('playing');
+            }
+        });
+
+        audio.addEventListener('loadedmetadata', () => {
+            seekSlider.max = Math.floor(audio.duration);
+            totalDurationEl.textContent = formatTime(audio.duration);
+        });
+
+        audio.addEventListener('timeupdate', () => {
+            seekSlider.value = Math.floor(audio.currentTime);
+            currentTimeEl.textContent = formatTime(audio.currentTime);
+        });
+
+        seekSlider.addEventListener('input', () => {
+            audio.currentTime = seekSlider.value;
+            currentTimeEl.textContent = formatTime(audio.currentTime);
+        });
+
+        audio.addEventListener('ended', () => {
+            playIcon.classList.replace('fa-pause', 'fa-play');
+            songSection.classList.remove('playing');
+            seekSlider.value = 0;
+        });
+    </script>
+</body>
+
+</html>

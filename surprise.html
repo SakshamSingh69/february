@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Surprises For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="surprise.css">
+</head>
+
+<body>
+    <div class="heart-bg"></div>
+    <div class="container">
+        <h1 class="title">Surprises Just For You ✨</h1>
+        <p style="margin-bottom: 30px; font-size: 1.2rem;">Tap on a card to reveal deep secrets...</p>
+
+        <div class="card-grid">
+            <!-- Card 1: Shayari 1 -->
+            <div class="flashcard">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Secret #1 🌹</h3>
+                        <p>Tap to read...</p>
+                    </div>
+                    <div class="card-back">
+                        <p>"Teri har adaa mohabbat si lagti hai,<br>
+                            Ek pal ki judai muddat si lagti hai,<br>
+                            Pehle nahin socha tha ab sochne laga hoon,<br>
+                            Zindagi ke har lamhe mein teri zaroorat si lagti hai."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Shayari 2 -->
+            <div class="flashcard">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Secret #2 💖</h3>
+                        <p>Tap to read...</p>
+                    </div>
+                    <div class="card-back">
+                        <p>"Aankhon ki gehrai mein teri kho jaana chahta hoon,<br>
+                            Aaj tujhe baahon mein lekar so jaana chahta hoon,<br>
+                            Tod kar hadein saari aaj,<br>
+                            Sirf tera aur tera ho jaana chahta hoon."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Shayari 3 -->
+            <div class="flashcard">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Secret #3 💫</h3>
+                        <p>Tap to read...</p>
+                    </div>
+                    <div class="card-back">
+                        <p>"Na zindadili maajra hai, na shauq-e-nazaara hai,<br>
+                            Humari aankhon mein to bas tera chehra pukara hai."<br><br>
+                            (You are the only view I ever want to see.)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Our Story -->
+            <div class="flashcard">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Our Story 📖</h3>
+                        <p>How it all began...</p>
+                    </div>
+                    <div class="card-back">
+                        <p>From strangers to soulmates, our journey has been magical. Every laugh, every tear, and every
+                            moment shared has built a beautiful world that is ours alone. I am so grateful for the day
+                            our paths crossed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Songs & Promises -->
+            <div class="flashcard">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Secret #5 💘</h3>
+                        <p>A deep thought...</p>
+                    </div>
+                    <div class="card-back">
+                        <p style="white-space: pre-line;">Wo Darr Mein Jeeti H Ki Khoo Degi Mujhe Bhi 😔💞
+                            Meri Aankhen Padhe Kisi Din To Roo Degi Wo Bhii 🥺💓
+                            Mujhe Bata Na H Use Ki Pyaar Aisa Hota H 💖✨
+                            Ki Pyaar Mein Saans Chhutt Jati H Par Hanth Nhi Chhutta Kabhi Bhi 🤝❤️♾️</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Why I Like You -->
+            <div class="flashcard">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Why You? 🌟</h3>
+                        <p>My favorite things...</p>
+                    </div>
+                    <div class="card-back">
+                        <p>Your kindness warms my heart.<br>
+                            Your smile lights up my darkest days.<br>
+                            You are my best friend and my calm in the chaos.<br>
+                            Simply put: You are <strong>Perfect</strong>.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 40px;">
+            <!-- Optional: Suggestion or 'My Vow' as requested for the 6th point implication of 'surprise me' -->
+            <div class="glass-box" style="margin-top: 20px;">
+                <h3>My Surprise For You 🎁</h3>
+                <p>Pack your bags (conceptually)! I promise to take you on a surprise date to your favorite place soon.
+                    Just you, me, and the stars.</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 50px; text-align: center; max-width: 600px;">
+            <p
+                style="font-size: 1.5rem; font-weight: bold; text-transform: none; color: var(--accent-color); line-height: 1.6; margin-bottom: 20px;">
+                Did you think the surprises were over? Nah! ❤️<br>
+                I love you more than you could ever imagine... and there are even more surprises waiting for you! 🌹🥰
+            </p>
+            <a href="final_surprise.html" class="btn-next" style="display: inline-block; margin-bottom: 20px;">SEE MORE
+                SURPRISES 🎁</a>
+            <br>
+            <a href="page1.html" class="btn-next"
+                style="background: var(--secondary-color); font-size: 1rem; padding: 10px 20px;">Start Over ↺</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Add specific flip functionality for touch devices if needed, but CSS hover/active usually works.
+        // Adding click toggle for better mobile experience
+        document.querySelectorAll('.flashcard').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('flipped');
+            });
+        });
+
+        // Background hearts
+        const bg = document.querySelector('.heart-bg');
+        setInterval(() => {
+            const heart = document.createElement('div');
+            heart.classList.add('bg-heart');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 10 + 5 + 's';
+            heart.innerText = '❤';
+            bg.appendChild(heart);
+            setTimeout(() => heart.remove(), 15000);
+        }, 500);
+    </script>
+</body>
+
+</html>

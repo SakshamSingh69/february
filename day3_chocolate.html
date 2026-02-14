@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3: Chocolate Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="day3.css">
+</head>
+
+<body>
+    <div class="chocolate-rain"></div>
+
+    <div class="container">
+        <h1 class="title">You are Sweeter than Chocolate! 🍫</h1>
+
+        <div class="glass-box">
+            <h3>My Sweet Message</h3>
+            <p>Life with you is delicious!</p>
+            <p class="message-content" style="font-size: 1.2rem; font-style: italic; white-space: pre-line;">
+                Tum Par Agar Haq Sirf Mera Ho To Tmhare Isharon Pe Bhi Chal Skta Hu Mein 💘👣
+                Kismaton Ka Likha To Kuch Bhi Nhi Tmhe Paane Ko To Hanthon Ki Lakiron Ko Bhi Badal Skta Hun Mein ✨🤲💞
+                Ek Tera Ruth Jana Hi Bardash Nhi Hota Mujhse Baaki To Harr Ek Sadme Se Nikal Skta Hun Mein 🥺❤️🩹🌹
+                Aur Abb Mujhe Sambhalna Kisi Aur Ke Bass Ki Nhi 💫💓
+                Suno Mujhe Tum Sambhalo Fir Shayad Sambhal Sakta Hun Mein 🤍🤝💕</p>
+        </div>
+
+        <div class="choc-bar-container">
+            <div class="chocolate-bar">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+        </div>
+
+        <div class="glass-box sticker-area">
+            <img src="https://media.tenor.com/fK7tC62Z3wIAAAAi/milk-and-mocha-eating.gif" alt="Eating Chocolate">
+        </div>
+
+        <div class="glass-box photo-section">
+            <h3></h3>
+            <div class="photo-frame"
+                style="background: transparent; border: none; box-shadow: none; padding: 0; width: auto; height: auto; transform: none;">
+                <img src="https://media1.tenor.com/m/RXF9kEWyyHwAAAAC/peach-goma.gif" alt="Peach Goma" id="user-photo-2"
+                    style="mix-blend-mode: multiply; max-width: 250px;">
+            </div>
+        </div>
+
+        <div class="button-container" style="text-align: center; margin-top: 30px;">
+            <a href="day4_teddy.html" class="btn-next">Yes! (Next) 🍫</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Create falling chocolates
+        const rainContainer = document.querySelector('.chocolate-rain');
+        const emojis = ['🍫', '🍬', '🍭', '🍩'];
+
+        setInterval(() => {
+            const el = document.createElement('div');
+            el.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+            el.className = 'falling-choc';
+            el.style.left = Math.random() * 100 + 'vw';
+            el.style.animationDuration = Math.random() * 3 + 2 + 's';
+            rainContainer.appendChild(el);
+
+            setTimeout(() => el.remove(), 5000);
+        }, 300);
+    </script>
+</body>
+
+</html>
